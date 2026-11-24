@@ -1,5 +1,5 @@
 function App() {
-  return <main />
+  return <main className="min-h-dvh" />
 }
 
 export default App
