@@ -10,6 +10,9 @@
     "logo": "K/",
     "homeLabel": "Kike, volver al inicio",
     "about": "Sobre mí",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "languageToggle": "Cambiar el idioma a inglés",
+    "themeToDark": "Activar el modo oscuro",
+    "themeToLight": "Activar el modo claro"
   }
 }

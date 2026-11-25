@@ -10,6 +10,9 @@
     "logo": "K/",
     "homeLabel": "Kike, back to top",
     "about": "About",
-    "projects": "Work"
+    "projects": "Work",
+    "languageToggle": "Switch language to Spanish",
+    "themeToDark": "Switch to dark mode",
+    "themeToLight": "Switch to light mode"
   }
 }
