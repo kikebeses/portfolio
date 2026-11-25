@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import Reveal from '../components/Reveal'
 import SectionLayout from '../components/SectionLayout'
-import { skills } from '../data/skills'
 import { useTextFill } from '../hooks/useTextFill'
 
 function About() {
@@ -25,23 +23,6 @@ function About() {
           {t('about.text')}
         </motion.span>
       </p>
-      <Reveal className="mt-12">
-        <ul
-          aria-label={t('about.skillsLabel')}
-          className="flex flex-wrap gap-x-5.5 gap-y-2.5 font-serif text-base text-muted-2 italic"
-        >
-          {skills.map((skill, index) => (
-            <li key={skill} className="flex gap-x-5.5">
-              {index > 0 && (
-                <span aria-hidden="true" className="text-sep">
-                  /
-                </span>
-              )}
-              {skill}
-            </li>
-          ))}
-        </ul>
-      </Reveal>
     </SectionLayout>
   )
 }

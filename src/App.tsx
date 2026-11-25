@@ -6,6 +6,7 @@ import Education from './sections/Education'
 import Experience from './sections/Experience'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
+import Stack from './sections/Stack'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <ContentSheet>
           <About />
+          <Stack />
           <Experience />
           <Education />
           <Projects />

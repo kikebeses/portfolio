@@ -28,17 +28,21 @@
   },
   "about": {
     "label": "01 — Sobre mí",
-    "text": "Soy Kike, recién salido del horno del DAW y con 9 meses de trabajo real a mis espaldas. Me muevo a gusto por los dos lados: interfaces con React y servidores con Node, Java o PHP, con bases de datos que no se rompen (casi nunca). Me adapto rápido, me gusta proponer cosas y hablo con el equipo antes de que un problema se haga grande.",
+    "text": "Cuando no estoy programando, suelo estar jugando al fútbol, en el gimnasio o saliendo a correr, casi siempre con música puesta. Y en cuanto tengo unos días libres, hago la maleta para conocer algún sitio nuevo. Se me da bien trabajar en equipo y comunicarme: prefiero comentar un problema a tiempo que arreglarlo tarde. Me gusta aprender cosas nuevas y estar al día de lo que va saliendo, y si algo me llama la atención acabo trasteando con ello en algún proyecto."
+  },
+  "stack": {
+    "label": "02 — Stack",
+    "text": "Estoy recién salido del horno del DAW y llevo 9 meses de trabajo real a mis espaldas. Me muevo a gusto por los dos lados: interfaces con React y servidores con Node, Java o PHP, con bases de datos que no se rompen (casi nunca). Me adapto rápido a las herramientas de cada equipo y me gusta proponer mejoras.",
     "skillsLabel": "Tecnologías"
   },
   "experience": {
-    "label": "02 — Experiencia"
+    "label": "03 — Experiencia"
   },
   "education": {
-    "label": "03 — Estudios"
+    "label": "04 — Estudios"
   },
   "projects": {
-    "label": "04 — Proyectos",
+    "label": "05 — Proyectos",
     "heading": "Proyectos",
     "technologies": "Tecnologías",
     "visit": "Visitar web",
