@@ -33,7 +33,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-col gap-4.5 p-[clamp(16px,3vw,36px)]">
           <p className="font-serif text-base text-accent-ink italic">{domain}</p>
           <h3 className="text-project font-medium">{title}</h3>
-          <p className="max-w-[400px] text-lg leading-copy text-pretty text-muted-2">
+          <p className="max-w-100 text-lg leading-copy text-pretty text-muted-2">
             {project.description[language]}
           </p>
           <ul aria-label={t('projects.technologies')} className="flex flex-wrap gap-1.5">
