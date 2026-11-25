@@ -215,6 +215,11 @@
   /* Layout */
   --container-page: 1280px;
   --spacing-gutter: clamp(20px, 5vw, 48px);
+  /*
+   * `wide:` the label + content sections switch to 4 columns once the content
+   * area fits 4 × 240px columns + 3 × 64px gaps = 1152px (viewport − 2 × 48px gutter).
+   */
+  --breakpoint-wide: 78rem;
 
   /* Radii (pills use Tailwind's rounded-full) */
   --radius-*: initial;
