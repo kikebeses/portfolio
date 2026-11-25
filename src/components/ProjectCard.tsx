@@ -3,7 +3,7 @@ import { useCardGlow } from '../hooks/useCardGlow'
 import { useLanguage } from '../hooks/useLanguage'
 import type { Project } from '../types/project'
 import ProjectLink from './ProjectLink'
-import ProjectScreenshot from './ProjectScreenshot'
+import ProjectMedia from './ProjectMedia'
 import TechBadge from './TechBadge'
 
 interface ProjectCardProps {
@@ -29,7 +29,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       className="rounded-card p-px shadow-card glow-border"
     >
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-3.5 rounded-card-inner bg-card p-3.5">
-        <ProjectScreenshot image={project.image} domain={domain} />
+        <ProjectMedia image={project.image} domain={domain} />
         <div className="flex flex-col gap-4.5 p-[clamp(16px,3vw,36px)]">
           <p className="font-serif text-base text-accent-ink italic">{domain}</p>
           <h3 className="text-project font-medium">{title}</h3>
