@@ -240,6 +240,22 @@
   @apply bg-lg-dark shadow-liquid-dark backdrop-blur-liquid backdrop-saturate-200;
 }
 
+/*
+ * Card border with a glow that follows the pointer. Set --x/--y (px, relative to
+ * the element) on pointer move; the default keeps the glow off-screen.
+ */
+@utility glow-border {
+  background:
+    radial-gradient(
+      480px circle at var(--x, -999px) var(--y, -999px),
+      rgb(255 91 31 / 0.95),
+      rgb(255 61 139 / 0.55) 28%,
+      rgb(255 196 0 / 0.3) 45%,
+      transparent 65%
+    ),
+    var(--card-border);
+}
+
 @layer base {
   html {
     /* The design uses the browser's normal line-height; paragraphs set their own. */
