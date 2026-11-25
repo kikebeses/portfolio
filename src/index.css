@@ -229,3 +229,35 @@
   /* Global easing curve used by every transition and animation */
   --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
+
+@layer base {
+  html {
+    /* The design uses the browser's normal line-height; paragraphs set their own. */
+    line-height: normal;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    /* Visible when overscrolling past the page edges */
+    background-color: var(--body);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.4s;
+  }
+
+  ::selection {
+    background-color: rgb(255 91 31 / 0.3);
+  }
+
+  /* Keyboard focus: ink contrasts on every surface, including the orange hero */
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+}
