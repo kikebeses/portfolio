@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import GithubIcon from '../components/GithubIcon'
 import HeroTitle from '../components/HeroTitle'
@@ -5,15 +6,20 @@ import LinkedinIcon from '../components/LinkedinIcon'
 import Reveal from '../components/Reveal'
 import SocialButton from '../components/SocialButton'
 import { GITHUB_URL, LINKEDIN_URL } from '../data/contact'
+import { useHeroScroll } from '../hooks/useHeroScroll'
 
 function Hero() {
   const { t } = useTranslation()
+  const scrollStyle = useHeroScroll()
 
   return (
     // Sticky: the content sheet slides up over it while scrolling.
     // `/srgb`: same gradient interpolation as the design (Tailwind defaults to oklab).
     <section className="sticky top-0 z-0 h-svh bg-linear-165/srgb from-hero-a to-hero-b">
-      <div className="mx-auto flex h-full max-w-page origin-[50%_30%] flex-col justify-between px-gutter pt-30 pb-14">
+      <motion.div
+        style={scrollStyle}
+        className="mx-auto flex h-full max-w-page origin-[50%_30%] flex-col justify-between px-gutter pt-30 pb-14"
+      >
         <Reveal className="self-start font-serif text-xs tracking-label text-muted italic">
           {t('hero.openToWork')}
         </Reveal>
@@ -46,7 +52,7 @@ function Hero() {
             </Reveal>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
