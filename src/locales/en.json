@@ -4,5 +4,12 @@
   },
   "app": {
     "placeholder": "Portfolio under construction"
+  },
+  "header": {
+    "navLabel": "Main",
+    "logo": "K/",
+    "homeLabel": "Kike, back to top",
+    "about": "About",
+    "projects": "Work"
   }
 }
