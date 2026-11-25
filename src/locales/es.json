@@ -18,6 +18,13 @@
   },
   "hero": {
     "openToWork": "#opentowork",
-    "title": "Hola, soy Kike."
+    "title": "Hola, soy Kike.",
+    "role": "Desarrollador Web",
+    "tagline": "Hago webs. Los bugs los hago sin querer.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "common": {
+    "opensInNewTab": "(se abre en una pestaña nueva)"
   }
 }

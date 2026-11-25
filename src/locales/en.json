@@ -18,6 +18,13 @@
   },
   "hero": {
     "openToWork": "#opentowork",
-    "title": "Hi, I'm Kike."
+    "title": "Hi, I'm Kike.",
+    "role": "Web Developer",
+    "tagline": "I make websites. The bugs are unintentional.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "common": {
+    "opensInNewTab": "(opens in a new tab)"
   }
 }
