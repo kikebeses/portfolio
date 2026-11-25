@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Kike Beses · Web developer",
-    "description": "Portfolio of Kike (Enrique Beses), full-stack web developer: React interfaces and Node.js, Java or PHP back ends."
+    "title": "Kike Beses · Full-stack developer",
+    "description": "Portfolio of Kike (Enrique Beses), full-stack developer: React interfaces and Node.js, Java or PHP back ends."
   },
   "header": {
     "navLabel": "Main",
@@ -21,7 +21,7 @@
   "hero": {
     "openToWork": "#opentowork",
     "title": "Hi, I'm Kike.",
-    "role": "Web Developer",
+    "role": "Full-Stack Developer",
     "tagline": "I make websites. The bugs are unintentional.",
     "github": "GitHub",
     "linkedin": "LinkedIn"
