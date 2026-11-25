@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import ContactButton from './ContactButton'
 import LanguageToggle from './LanguageToggle'
 import NavLink from './NavLink'
 import ThemeToggle from './ThemeToggle'
@@ -29,6 +30,7 @@ function Header() {
         <span aria-hidden="true" className="mx-1 h-5 w-px bg-line" />
         <LanguageToggle />
         <ThemeToggle />
+        <ContactButton />
       </nav>
     </header>
   )
