@@ -57,6 +57,7 @@ export function changeLanguage(language: Language): Promise<unknown> {
 i18n.on('languageChanged', (language) => {
   document.documentElement.lang = language
   document.title = i18n.t('meta.title')
+  document.querySelector('meta[name="description"]')?.setAttribute('content', i18n.t('meta.description'))
 })
 
 void i18n.use(initReactI18next).init({

@@ -9,10 +9,16 @@
     <!-- Both fonts are visible above the fold: fetch them before the CSS asks for them -->
     <link rel="preload" href="/src/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/src/assets/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <title>Kike · Portfolio</title>
+    <title>Kike Beses · Desarrollador web</title>
+    <meta
+      name="description"
+      content="Portfolio de Kike (Enrique Beses), desarrollador web full-stack: interfaces con React y servidores con Node.js, Java o PHP."
+    />
+    <meta name="theme-color" content="#ff8a3d" />
     <script>
       // Apply the saved theme, or the system one on a first visit, before the
-      // first paint so there is no flash. Keep the key in sync with src/theme.ts.
+      // first paint so there is no flash. Keep the key and the bar colours in
+      // sync with src/theme.ts.
       ;(function () {
         var stored = null
         try {
@@ -22,6 +28,9 @@
           stored === 'dark' ||
           (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
         document.documentElement.classList.toggle('dark', dark)
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute('content', dark ? '#4a1c07' : '#ff8a3d')
       })()
     </script>
   </head>

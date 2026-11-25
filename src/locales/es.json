@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Kike · Portfolio"
+    "title": "Kike Beses · Desarrollador web",
+    "description": "Portfolio de Kike (Enrique Beses), desarrollador web full-stack: interfaces con React y servidores con Node.js, Java o PHP."
   },
   "header": {
     "navLabel": "Principal",
