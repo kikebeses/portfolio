@@ -40,7 +40,7 @@ function ContactPanel({ id, ref, onNavigate }: ContactPanelProps) {
       animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
       exit={hidden}
       transition={{ duration: 0.3, ease: EASE_SOFT }}
-      className="absolute top-full right-0 mt-2 w-[min(20rem,calc(100vw-1.5rem))] origin-top-right rounded-media border border-glass-border bg-surface/80 p-1.5 shadow-glass backdrop-blur-glass backdrop-saturate-180"
+      className="absolute top-full right-0 mt-2 w-[min(20rem,calc(100vw-1.5rem))] origin-top-right rounded-media p-1.5 liquid-glass-panel"
     >
       <ul className="flex flex-col gap-0.5">
         {/* The email is not a link: it can only be copied */}
