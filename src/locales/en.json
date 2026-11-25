@@ -13,7 +13,9 @@
     "themeToLight": "Switch to light mode",
     "contact": "Contact",
     "contactPanelLabel": "Ways to reach me",
-    "email": "Email"
+    "email": "Email",
+    "copyEmail": "Copy email",
+    "emailCopied": "Email copied"
   },
   "hero": {
     "openToWork": "#opentowork",
