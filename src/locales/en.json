@@ -28,17 +28,21 @@
   },
   "about": {
     "label": "01 — About",
-    "text": "I'm Kike, fresh out of my Web Development degree with 9 months of real work under my belt. I'm comfortable on both sides: interfaces in React and servers in Node, Java or PHP, with databases that don't break (almost never). I adapt fast, I like to pitch ideas, and I talk to the team before a problem gets big.",
+    "text": "When I'm not coding, I'm usually playing football, at the gym or out for a run, almost always with music on. And whenever I get a few days off, I pack a bag and go somewhere new. I'm good at working in a team and communicating: I'd rather bring up a problem early than fix it late. I like learning new things and keeping up with what's coming out, and if something catches my eye I end up tinkering with it in some project."
+  },
+  "stack": {
+    "label": "02 — Stack",
+    "text": "I'm fresh out of my Web Development degree with 9 months of real work under my belt. I'm comfortable on both sides: interfaces in React and servers in Node, Java or PHP, with databases that don't break (almost never). I quickly pick up whatever tools each team uses, and I like to suggest improvements.",
     "skillsLabel": "Technologies"
   },
   "experience": {
-    "label": "02 — Experience"
+    "label": "03 — Experience"
   },
   "education": {
-    "label": "03 — Education"
+    "label": "04 — Education"
   },
   "projects": {
-    "label": "04 — Work",
+    "label": "05 — Work",
     "heading": "Projects",
     "technologies": "Technologies",
     "visit": "Visit site",
