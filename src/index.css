@@ -230,6 +230,16 @@
   --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+/* "Liquid glass" surface from the design, used on hover: `hover:liquid-glass` */
+@utility liquid-glass {
+  @apply bg-lg-bg shadow-liquid backdrop-blur-liquid backdrop-saturate-220;
+}
+
+/* The same effect for dark filled buttons (GitHub, Contact) */
+@utility liquid-glass-dark {
+  @apply bg-lg-dark shadow-liquid-dark backdrop-blur-liquid backdrop-saturate-200;
+}
+
 @layer base {
   html {
     /* The design uses the browser's normal line-height; paragraphs set their own. */
