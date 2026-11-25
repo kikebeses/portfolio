@@ -26,6 +26,127 @@
     U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Dark mode is toggled manually with a `dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Colour tokens from the design. Light is the default theme; `.dark` swaps
+ * every value, so components never need `dark:` variants for colours.
+ */
+:root {
+  color-scheme: light;
+
+  --ink: #1b0f0a;
+  --muted: #4a2412;
+  --muted-2: #6b3a22;
+  --faint: #8f5e44;
+  --off: rgb(27 15 10 / 0.45);
+  --sep: rgb(27 15 10 / 0.25);
+  --line: rgb(27 15 10 / 0.18);
+  --line-2: #f0dccb;
+  --line-3: #f0dccb;
+  --card-border: #f0d8c6;
+  --surface: #fff4ea;
+  --card: #fffaf5;
+  --badge: #ffffff;
+  --stripe-a: #fbe6d5;
+  --stripe-b: #fff3e8;
+  --hero-a: #ff8a3d;
+  --hero-b: #ff4a12;
+  --glass: rgb(255 255 255 / 0.22);
+  --glass-border: rgb(255 255 255 / 0.45);
+  --glass-2: rgb(255 255 255 / 0.2);
+  --btn-bg: #1b0f0a;
+  --btn-fg: #fff4ea;
+  --fill-base: #ebcdb8;
+  --body: #ff4a12;
+  --accent-ink: #c2380a;
+  --role-a: #1b0f0a;
+  --role-b: #8e1b47;
+  /* "Liquid glass" hover effect */
+  --lg-bg: rgb(255 255 255 / 0.42);
+  --lg-hi: rgb(255 255 255 / 0.95);
+  --lg-lo: rgb(255 255 255 / 0.35);
+  --lg-edge: rgb(255 255 255 / 0.5);
+  --lg-dark: rgb(27 15 10 / 0.72);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --ink: #fff1e6;
+  --muted: #e7bfa6;
+  --muted-2: #c49a82;
+  --faint: #a07a64;
+  --off: rgb(255 241 230 / 0.4);
+  --sep: rgb(255 241 230 / 0.25);
+  --line: rgb(255 241 230 / 0.16);
+  --line-2: #2a1a11;
+  --line-3: #33221a;
+  --card-border: #2e1d13;
+  --surface: #130b07;
+  --card: #1b120c;
+  --badge: #22170f;
+  --stripe-a: #20150e;
+  --stripe-b: #261910;
+  --hero-a: #4a1c07;
+  --hero-b: #1a0b04;
+  --glass: rgb(40 18 8 / 0.45);
+  --glass-border: rgb(255 241 230 / 0.16);
+  --glass-2: rgb(40 18 8 / 0.35);
+  --btn-bg: #fff1e6;
+  --btn-fg: #1b0f0a;
+  --fill-base: #3b2a20;
+  --body: #1a0b04;
+  --accent-ink: #ff8a4c;
+  --role-a: #fff1e6;
+  --role-b: #ff9a5c;
+  --lg-bg: rgb(255 255 255 / 0.12);
+  --lg-hi: rgb(255 255 255 / 0.35);
+  --lg-lo: rgb(255 255 255 / 0.1);
+  --lg-edge: rgb(255 255 255 / 0.16);
+  --lg-dark: rgb(255 241 230 / 0.8);
+}
+
+/* `inline` makes utilities read the variables above, so they follow the theme. */
+@theme inline {
+  /* Only the design palette is available: no default Tailwind colours. */
+  --color-*: initial;
+
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-faint: var(--faint);
+  --color-off: var(--off);
+  --color-sep: var(--sep);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-line-3: var(--line-3);
+  --color-card-border: var(--card-border);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-badge: var(--badge);
+  --color-stripe-a: var(--stripe-a);
+  --color-stripe-b: var(--stripe-b);
+  --color-hero-a: var(--hero-a);
+  --color-hero-b: var(--hero-b);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+  --color-glass-2: var(--glass-2);
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-fg: var(--btn-fg);
+  --color-fill-base: var(--fill-base);
+  --color-body: var(--body);
+  --color-accent-ink: var(--accent-ink);
+  --color-role-a: var(--role-a);
+  --color-role-b: var(--role-b);
+  --color-lg-bg: var(--lg-bg);
+  --color-lg-hi: var(--lg-hi);
+  --color-lg-lo: var(--lg-lo);
+  --color-lg-edge: var(--lg-edge);
+  --color-lg-dark: var(--lg-dark);
+}
+
 @theme {
   /* Space Grotesk is the main font (font-sans is Tailwind's default family). */
   --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
