@@ -29,6 +29,9 @@
   "experience": {
     "label": "02 — Experience"
   },
+  "education": {
+    "label": "03 — Education"
+  },
   "projects": {
     "label": "04 — Work",
     "heading": "Projects",

@@ -1,6 +1,7 @@
 import ContentSheet from './components/ContentSheet'
 import Header from './components/Header'
 import About from './sections/About'
+import Education from './sections/Education'
 import Experience from './sections/Experience'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
@@ -14,6 +15,7 @@ function App() {
         <ContentSheet>
           <About />
           <Experience />
+          <Education />
           <Projects />
         </ContentSheet>
       </main>
