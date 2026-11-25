@@ -1,3 +1,4 @@
+import bemadentLogo from '../assets/projects/bemadent-logo.svg'
 import type { Project } from '../types/project'
 
 export const projects: Project[] = [
@@ -10,5 +11,10 @@ export const projects: Project[] = [
     },
     url: 'https://bemadent.es',
     technologies: ['React', 'Node.js', 'Express', 'PostgreSQL'],
+    image: {
+      kind: 'logo',
+      src: bemadentLogo,
+      alt: { es: 'Logo de Bemadent', en: 'Bemadent logo' },
+    },
   },
 ]
