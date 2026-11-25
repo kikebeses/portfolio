@@ -40,6 +40,9 @@
     "visitLabel": "Visit site: {{title}} (opens in a new tab)",
     "screenshotPlaceholder": "screenshot · {{domain}}"
   },
+  "footer": {
+    "copyright": "© {{year}} Enrique Beses"
+  },
   "common": {
     "opensInNewTab": "(opens in a new tab)"
   }

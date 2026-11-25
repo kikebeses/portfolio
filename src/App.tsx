@@ -1,4 +1,5 @@
 import ContentSheet from './components/ContentSheet'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import About from './sections/About'
 import Education from './sections/Education'
@@ -19,6 +20,7 @@ function App() {
           <Projects />
         </ContentSheet>
       </main>
+      <Footer />
     </div>
   )
 }
