@@ -15,5 +15,9 @@
     "themeToDark": "Activar el modo oscuro",
     "themeToLight": "Activar el modo claro",
     "contact": "Contacto"
+  },
+  "hero": {
+    "openToWork": "#opentowork",
+    "title": "Hola, soy Kike."
   }
 }
