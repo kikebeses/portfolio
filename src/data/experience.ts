@@ -5,8 +5,8 @@ export const experience: TimelineEntry[] = [
     id: 'temotiva',
     period: { es: 'Feb 2026 — Sep 2026', en: 'Feb 2026 — Sep 2026' },
     title: {
-      es: 'Desarrollador Web (Prácticas y Colaboración)',
-      en: 'Web Developer (Internship & Collaboration)',
+      es: 'Desarrollador Full-Stack (Prácticas y Colaboración)',
+      en: 'Full-Stack Developer (Internship & Collaboration)',
     },
     organization: 'Temotiva',
     location: 'Valencia',
