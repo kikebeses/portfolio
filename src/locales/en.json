@@ -24,6 +24,14 @@
     "github": "GitHub",
     "linkedin": "LinkedIn"
   },
+  "projects": {
+    "label": "04 — Work",
+    "heading": "Projects",
+    "technologies": "Technologies",
+    "visit": "Visit site",
+    "visitLabel": "Visit site: {{title}} (opens in a new tab)",
+    "screenshotPlaceholder": "screenshot · {{domain}}"
+  },
   "common": {
     "opensInNewTab": "(opens in a new tab)"
   }
