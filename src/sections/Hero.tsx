@@ -32,7 +32,7 @@ function Hero() {
               </span>
             </Reveal>
             <Reveal delay={850} className="flex flex-col gap-6">
-              <p className="max-w-[440px] text-lg leading-copy text-pretty text-muted">
+              <p className="max-w-110 text-lg leading-copy text-pretty text-muted">
                 {t('hero.tagline')}
               </p>
               <div className="flex flex-wrap gap-3">
