@@ -1,5 +1,6 @@
 import { animate, useMotionValue, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
+import type { RefObject } from 'react'
 import { EASE_SOFT } from '../motion'
 
 /** How far from the element's edges (px) the pointer starts pulling it. */
@@ -9,10 +10,12 @@ const STRENGTH = 0.05
 
 /**
  * Magnetic effect from the design: the element drifts towards a nearby mouse pointer.
- * Spread the returned `ref` and `style` onto a motion element.
+ * Spread the returned `ref` and `style` onto a motion element. Pass `externalRef`
+ * when another hook also needs the element.
  */
-export function useMagnetic<T extends HTMLElement>() {
-  const ref = useRef<T>(null)
+export function useMagnetic<T extends HTMLElement>(externalRef?: RefObject<T | null>) {
+  const internalRef = useRef<T>(null)
+  const ref = externalRef ?? internalRef
   const x = useMotionValue(0)
   const y = useMotionValue(0)
   const reduceMotion = useReducedMotion()
@@ -48,7 +51,7 @@ export function useMagnetic<T extends HTMLElement>() {
 
     window.addEventListener('pointermove', onPointerMove, { passive: true })
     return () => window.removeEventListener('pointermove', onPointerMove)
-  }, [reduceMotion, x, y])
+  }, [reduceMotion, ref, x, y])
 
   return { ref, style: { x, y } }
 }
