@@ -4,6 +4,7 @@ import type { Ref } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from '../data/contact'
 import { EASE_SOFT } from '../motion'
+import ContactInfo from './ContactInfo'
 import ContactLink from './ContactLink'
 import CopyEmailButton from './CopyEmailButton'
 import GithubIcon from './GithubIcon'
@@ -42,16 +43,12 @@ function ContactPanel({ id, ref, onNavigate }: ContactPanelProps) {
       className="absolute top-full right-0 mt-2 w-[min(20rem,calc(100vw-1.5rem))] origin-top-right rounded-media border border-glass-border bg-surface/80 p-1.5 shadow-glass backdrop-blur-glass backdrop-saturate-180"
     >
       <ul className="flex flex-col gap-0.5">
-        <li className="flex items-center">
-          <ContactLink
-            href={`mailto:${CONTACT_EMAIL}`}
-            icon={Mail}
-            label={t('header.email')}
-            detail={CONTACT_EMAIL}
-            onClick={onNavigate}
-            className="flex-1"
-          />
-          <CopyEmailButton />
+        {/* The email is not a link: it can only be copied */}
+        <li className="flex min-w-0 items-center gap-3 py-2 pr-0.5 pl-2.5 text-ink">
+          <ContactInfo icon={Mail} label={t('header.email')} detail={CONTACT_EMAIL} />
+          <span className="ml-auto">
+            <CopyEmailButton />
+          </span>
         </li>
         <li>
           <ContactLink
@@ -59,7 +56,6 @@ function ContactPanel({ id, ref, onNavigate }: ContactPanelProps) {
             icon={LinkedinIcon}
             label={t('hero.linkedin')}
             detail={displayUrl(LINKEDIN_URL)}
-            external
             onClick={onNavigate}
           />
         </li>
@@ -69,7 +65,6 @@ function ContactPanel({ id, ref, onNavigate }: ContactPanelProps) {
             icon={GithubIcon}
             label={t('hero.github')}
             detail={displayUrl(GITHUB_URL)}
-            external
             onClick={onNavigate}
           />
         </li>
