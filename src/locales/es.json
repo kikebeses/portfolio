@@ -13,7 +13,9 @@
     "themeToLight": "Activar el modo claro",
     "contact": "Contacto",
     "contactPanelLabel": "Formas de contactarme",
-    "email": "Correo"
+    "email": "Correo",
+    "copyEmail": "Copiar el correo",
+    "emailCopied": "Correo copiado"
   },
   "hero": {
     "openToWork": "#opentowork",

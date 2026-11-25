@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from '../data/contact'
 import { EASE_SOFT } from '../motion'
 import ContactLink from './ContactLink'
+import CopyEmailButton from './CopyEmailButton'
 import GithubIcon from './GithubIcon'
 import LinkedinIcon from './LinkedinIcon'
 
@@ -50,6 +51,7 @@ function ContactPanel({ id, ref, onNavigate }: ContactPanelProps) {
             onClick={onNavigate}
             className="flex-1"
           />
+          <CopyEmailButton />
         </li>
         <li>
           <ContactLink
