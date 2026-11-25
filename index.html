@@ -7,6 +7,20 @@
     <link rel="preload" href="/src/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/src/assets/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
     <title>Kike · Portfolio</title>
+    <script>
+      // Apply the saved theme, or the system one on a first visit, before the
+      // first paint so there is no flash. Keep the key in sync with src/theme.ts.
+      ;(function () {
+        var stored = null
+        try {
+          stored = localStorage.getItem('theme')
+        } catch (e) {}
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
