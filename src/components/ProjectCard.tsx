@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { useCardGlow } from '../hooks/useCardGlow'
 import { useLanguage } from '../hooks/useLanguage'
 import type { Project } from '../types/project'
 import ProjectLink from './ProjectLink'
@@ -16,12 +17,17 @@ function getDomain(url: string): string {
 function ProjectCard({ project }: ProjectCardProps) {
   const { t } = useTranslation()
   const { language } = useLanguage()
+  const glow = useCardGlow()
   const domain = getDomain(project.url)
   const title = project.title[language]
 
   return (
-    // The 1px padding over the outer background draws the card border
-    <article className="rounded-card bg-card-border p-px shadow-card">
+    // The 1px padding over the outer background draws the (glowing) card border
+    <article
+      onPointerMove={glow.onPointerMove}
+      onPointerLeave={glow.onPointerLeave}
+      className="rounded-card p-px shadow-card glow-border"
+    >
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] gap-3.5 rounded-card-inner bg-card p-3.5">
         <ProjectScreenshot image={project.image} domain={domain} />
         <div className="flex flex-col gap-4.5 p-[clamp(16px,3vw,36px)]">
