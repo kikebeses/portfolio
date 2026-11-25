@@ -2,9 +2,6 @@
   "meta": {
     "title": "Kike · Portfolio"
   },
-  "app": {
-    "placeholder": "Portfolio under construction"
-  },
   "header": {
     "navLabel": "Main",
     "logo": "K/",
@@ -23,6 +20,11 @@
     "tagline": "I make websites. The bugs are unintentional.",
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "about": {
+    "label": "01 — About",
+    "text": "I'm Kike, fresh out of my Web Development degree with 9 months of real work under my belt. I'm comfortable on both sides: interfaces in React and servers in Node, Java or PHP, with databases that don't break (almost never). I adapt fast, I like to pitch ideas, and I talk to the team before a problem gets big.",
+    "skillsLabel": "Technologies"
   },
   "projects": {
     "label": "04 — Work",
