@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
+import FillText from '../components/FillText'
 import Reveal from '../components/Reveal'
 import SectionLayout from '../components/SectionLayout'
 import { skills } from '../data/skills'
 
+/** Same visual weight as About: large paragraph with the fill effect, then the skills. */
 function Stack() {
   const { t } = useTranslation()
 
@@ -13,11 +15,11 @@ function Stack() {
       className="pb-[clamp(72px,9vw,120px)]"
       contentClassName="max-w-225"
     >
-      <Reveal className="border-t border-line-2 pt-8">
-        <p className="max-w-155 text-lg leading-copy text-pretty text-muted">{t('stack.text')}</p>
+      <FillText>{t('stack.text')}</FillText>
+      <Reveal className="mt-12">
         <ul
           aria-label={t('stack.skillsLabel')}
-          className="mt-8 flex flex-wrap gap-x-5.5 gap-y-2.5 font-serif text-base text-muted-2 italic"
+          className="flex flex-wrap gap-x-5.5 gap-y-2.5 font-serif text-base text-muted-2 italic"
         >
           {skills.map((skill, index) => (
             <li key={skill} className="flex gap-x-5.5">
