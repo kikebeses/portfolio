@@ -26,6 +26,9 @@
     "text": "Soy Kike, recién salido del horno del DAW y con 9 meses de trabajo real a mis espaldas. Me muevo a gusto por los dos lados: interfaces con React y servidores con Node, Java o PHP, con bases de datos que no se rompen (casi nunca). Me adapto rápido, me gusta proponer cosas y hablo con el equipo antes de que un problema se haga grande.",
     "skillsLabel": "Tecnologías"
   },
+  "experience": {
+    "label": "02 — Experiencia"
+  },
   "projects": {
     "label": "04 — Proyectos",
     "heading": "Proyectos",
