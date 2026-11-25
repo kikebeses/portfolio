@@ -15,5 +15,9 @@
     "themeToDark": "Switch to dark mode",
     "themeToLight": "Switch to light mode",
     "contact": "Contact"
+  },
+  "hero": {
+    "openToWork": "#opentowork",
+    "title": "Hi, I'm Kike."
   }
 }
