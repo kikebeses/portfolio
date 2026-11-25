@@ -11,12 +11,8 @@ function Footer() {
       <div className="mx-auto max-w-page px-gutter">
         <div className="flex flex-wrap justify-between gap-3 border-t border-line-2 pt-8 pb-12 font-serif text-md text-faint italic">
           <p>{t('footer.copyright', { year })}</p>
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="text-muted-2 transition-colors duration-350 ease-soft hover:text-accent-ink"
-          >
-            {CONTACT_EMAIL}
-          </a>
+          {/* Plain text on purpose: the email never opens a mail app; one click selects it to copy */}
+          <p className="select-all text-muted-2">{CONTACT_EMAIL}</p>
         </div>
       </div>
     </footer>
