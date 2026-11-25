@@ -16,7 +16,7 @@ const resources = {
   en: { translation: en satisfies typeof es },
 }
 
-function isLanguage(value: unknown): value is Language {
+export function isLanguage(value: unknown): value is Language {
   return typeof value === 'string' && SUPPORTED_LANGUAGES.some((language) => language === value)
 }
 
