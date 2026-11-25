@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import ContactButton from './ContactButton'
+import ContactMenu from './ContactMenu'
 import LanguageToggle from './LanguageToggle'
 import NavLink from './NavLink'
 import ThemeToggle from './ThemeToggle'
@@ -11,7 +11,7 @@ function Header() {
     <header className="fixed inset-x-0 top-5 z-30 flex justify-center px-3">
       <nav
         aria-label={t('header.navLabel')}
-        className="flex items-center gap-1 rounded-full border border-glass-border bg-glass p-1.5 shadow-glass backdrop-blur-glass backdrop-saturate-180"
+        className="relative flex items-center gap-1 rounded-full border border-glass-border bg-glass p-1.5 shadow-glass backdrop-blur-glass backdrop-saturate-180"
       >
         <NavLink
           href="#top"
@@ -30,7 +30,8 @@ function Header() {
         <span aria-hidden="true" className="mx-1 h-5 w-px bg-line" />
         <LanguageToggle />
         <ThemeToggle />
-        <ContactButton />
+        {/* Its panel is positioned against the nav (relative) */}
+        <ContactMenu />
       </nav>
     </header>
   )

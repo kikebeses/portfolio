@@ -11,7 +11,9 @@
     "languageToggle": "Cambiar el idioma a inglés",
     "themeToDark": "Activar el modo oscuro",
     "themeToLight": "Activar el modo claro",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "contactPanelLabel": "Formas de contactarme",
+    "email": "Correo"
   },
   "hero": {
     "openToWork": "#opentowork",
