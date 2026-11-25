@@ -23,7 +23,7 @@ function Header() {
       <div className="relative">
         <nav
           aria-label={t('header.navLabel')}
-          className="flex items-center gap-1 rounded-full border border-glass-border bg-glass p-1.5 shadow-glass backdrop-blur-glass backdrop-saturate-180"
+          className="flex items-center gap-1 rounded-full p-1.5 liquid-glass"
         >
           <NavLink
             href="#top"

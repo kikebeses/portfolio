@@ -56,8 +56,6 @@
   --glass: rgb(255 255 255 / 0.22);
   --glass-border: rgb(255 255 255 / 0.45);
   --glass-2: rgb(255 255 255 / 0.2);
-  /* Not in the design: barely tinted glass for floating panels (Apple-like) */
-  --glass-clear: rgb(255 255 255 / 0.12);
   --btn-bg: #1b0f0a;
   --btn-fg: #fff4ea;
   --fill-base: #ebcdb8;
@@ -65,8 +63,11 @@
   --accent-ink: #c2380a;
   --role-a: #1b0f0a;
   --role-b: #8e1b47;
-  /* "Liquid glass" hover effect */
-  --lg-bg: rgb(255 255 255 / 0.42);
+  /*
+   * "Liquid glass". --lg-bg is more transparent than in the design (0.42 / 0.12),
+   * an Apple-like clear glass chosen by the owner.
+   */
+  --lg-bg: rgb(255 255 255 / 0.12);
   --lg-hi: rgb(255 255 255 / 0.95);
   --lg-lo: rgb(255 255 255 / 0.35);
   --lg-edge: rgb(255 255 255 / 0.5);
@@ -96,7 +97,6 @@
   --glass: rgb(40 18 8 / 0.45);
   --glass-border: rgb(255 241 230 / 0.16);
   --glass-2: rgb(40 18 8 / 0.35);
-  --glass-clear: rgb(255 255 255 / 0.07);
   --btn-bg: #fff1e6;
   --btn-fg: #1b0f0a;
   --fill-base: #3b2a20;
@@ -104,7 +104,7 @@
   --accent-ink: #ff8a4c;
   --role-a: #fff1e6;
   --role-b: #ff9a5c;
-  --lg-bg: rgb(255 255 255 / 0.12);
+  --lg-bg: rgb(255 255 255 / 0.07);
   --lg-hi: rgb(255 255 255 / 0.35);
   --lg-lo: rgb(255 255 255 / 0.1);
   --lg-edge: rgb(255 255 255 / 0.16);
@@ -136,7 +136,6 @@
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
   --color-glass-2: var(--glass-2);
-  --color-glass-clear: var(--glass-clear);
   --color-btn-bg: var(--btn-bg);
   --color-btn-fg: var(--btn-fg);
   --color-fill-base: var(--fill-base);
@@ -242,22 +241,21 @@
   --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-/* "Liquid glass" surface from the design, used on hover: `hover:liquid-glass` */
+/*
+ * Clear, Apple-like "liquid glass": a barely tinted surface over a blurred,
+ * saturated backdrop, with specular highlights on the edges. Used as a surface
+ * (header pill, contact panel) and on hover (`hover:liquid-glass`).
+ */
 @utility liquid-glass {
-  @apply bg-lg-bg shadow-liquid backdrop-blur-liquid backdrop-saturate-220;
-}
-
-/* The same effect for dark filled buttons (GitHub, Contact) */
-@utility liquid-glass-dark {
-  @apply bg-lg-dark shadow-liquid-dark backdrop-blur-liquid backdrop-saturate-200;
+  @apply bg-lg-bg shadow-liquid backdrop-blur-glass backdrop-saturate-180;
 }
 
 /*
- * Clear, Apple-like glass for floating panels (contact panel): a barely tinted
- * surface over a blurred, saturated backdrop, with specular highlights on the edges.
+ * Hover of dark filled buttons (GitHub, Contact): same blur and saturation, but
+ * it keeps the dark tint so their light text stays readable.
  */
-@utility liquid-glass-panel {
-  @apply bg-glass-clear shadow-liquid backdrop-blur-glass backdrop-saturate-180;
+@utility liquid-glass-dark {
+  @apply bg-lg-dark shadow-liquid-dark backdrop-blur-glass backdrop-saturate-180;
 }
 
 /*
