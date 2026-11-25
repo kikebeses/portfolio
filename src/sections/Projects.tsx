@@ -2,7 +2,11 @@ import { useTranslation } from 'react-i18next'
 import ProjectCard from '../components/ProjectCard'
 import Reveal from '../components/Reveal'
 import SectionLabel from '../components/SectionLabel'
+import StackedCard from '../components/StackedCard'
 import { projects } from '../data/projects'
+
+// The cards stack while scrolling once there is more than one project.
+const isStacked = projects.length > 1
 
 function Projects() {
   const { t } = useTranslation()
@@ -17,9 +21,11 @@ function Projects() {
           </h2>
         </div>
       </Reveal>
-      <div className="flex flex-col">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+      <div className={`flex flex-col ${isStacked ? 'gap-[12vh]' : ''}`}>
+        {projects.map((project, index) => (
+          <StackedCard key={project.id} index={index} enabled={isStacked}>
+            <ProjectCard project={project} />
+          </StackedCard>
         ))}
       </div>
     </section>
