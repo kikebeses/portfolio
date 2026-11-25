@@ -11,7 +11,9 @@
     "languageToggle": "Switch language to Spanish",
     "themeToDark": "Switch to dark mode",
     "themeToLight": "Switch to light mode",
-    "contact": "Contact"
+    "contact": "Contact",
+    "contactPanelLabel": "Ways to reach me",
+    "email": "Email"
   },
   "hero": {
     "openToWork": "#opentowork",
