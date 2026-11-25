@@ -2,19 +2,20 @@ import { useTranslation } from 'react-i18next'
 import { useLanguage } from '../hooks/useLanguage'
 import type { ProjectImage } from '../types/project'
 
-interface ProjectScreenshotProps {
+interface ProjectMediaProps {
   image?: ProjectImage
-  /** Shown on the placeholder while there is no screenshot. */
+  /** Shown on the placeholder while there is no image. */
   domain: string
 }
 
 const FRAME = 'min-h-[clamp(240px,34vw,460px)] rounded-media border border-line-2'
 
-function ProjectScreenshot({ image, domain }: ProjectScreenshotProps) {
+/** Image area of a project card: screenshot, logo on white, or a placeholder. */
+function ProjectMedia({ image, domain }: ProjectMediaProps) {
   const { t } = useTranslation()
   const { language } = useLanguage()
 
-  if (image) {
+  if (image?.kind === 'screenshot') {
     return (
       <img
         src={image.src}
@@ -26,7 +27,21 @@ function ProjectScreenshot({ image, domain }: ProjectScreenshotProps) {
     )
   }
 
-  // Striped placeholder from the design, until the screenshot is added
+  if (image?.kind === 'logo') {
+    return (
+      <div className={`${FRAME} flex items-center justify-center bg-white p-8`}>
+        <img
+          src={image.src}
+          alt={image.alt[language]}
+          loading="lazy"
+          decoding="async"
+          className="h-auto w-full max-w-90"
+        />
+      </div>
+    )
+  }
+
+  // Striped placeholder from the design, for projects without an image yet
   return (
     <div
       aria-hidden="true"
@@ -37,4 +52,4 @@ function ProjectScreenshot({ image, domain }: ProjectScreenshotProps) {
   )
 }
 
-export default ProjectScreenshot
+export default ProjectMedia

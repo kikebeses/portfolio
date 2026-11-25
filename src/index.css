@@ -169,6 +169,9 @@
   /* Newsreader italic: labels, dates, badges and footer. */
   --font-serif: 'Newsreader', ui-serif, Georgia, serif;
 
+  /* Fixed white, the same in both themes (project logo backgrounds) */
+  --color-white: #ffffff;
+
   /* Type scale: only the sizes the design uses. */
   --text-*: initial;
   --text-xs: 13px;
