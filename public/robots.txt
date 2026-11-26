@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kikebeses.vercel.app/sitemap.xml
