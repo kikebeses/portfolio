@@ -16,7 +16,8 @@ function ContactInfo({ icon: Icon, label, detail }: ContactInfoProps) {
       </span>
       <span className="flex min-w-0 flex-col">
         <span className="text-sm font-medium">{label}</span>
-        <span className="truncate font-serif text-sm text-muted-2 italic">{detail}</span>
+        {/* text-muted, not muted-2: the panel can sit over the orange hero */}
+        <span className="truncate font-serif text-sm text-muted italic">{detail}</span>
       </span>
     </>
   )

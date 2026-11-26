@@ -37,10 +37,14 @@
   color-scheme: light;
 
   --ink: #1b0f0a;
-  --muted: #4a2412;
+  /*
+   * --muted, --off and --role-b are slightly darker/more opaque than in the design
+   * (#4a2412, 0.45, #8e1b47) so text on the orange hero meets WCAG AA contrast.
+   */
+  --muted: #3b1c0e;
   --muted-2: #6b3a22;
   --faint: #8f5e44;
-  --off: rgb(27 15 10 / 0.45);
+  --off: rgb(27 15 10 / 0.68);
   --sep: rgb(27 15 10 / 0.25);
   --line: rgb(27 15 10 / 0.18);
   --line-2: #f0dccb;
@@ -62,7 +66,7 @@
   --body: #ff4a12;
   --accent-ink: #c2380a;
   --role-a: #1b0f0a;
-  --role-b: #8e1b47;
+  --role-b: #7d183e;
   /*
    * "Liquid glass". --lg-bg is more transparent than in the design (0.42 / 0.12),
    * an Apple-like clear glass chosen by the owner.
@@ -81,7 +85,8 @@
   --muted: #e7bfa6;
   --muted-2: #c49a82;
   --faint: #a07a64;
-  --off: rgb(255 241 230 / 0.4);
+  /* More opaque than in the design (0.4) to meet WCAG AA contrast */
+  --off: rgb(255 241 230 / 0.57);
   --sep: rgb(255 241 230 / 0.25);
   --line: rgb(255 241 230 / 0.16);
   --line-2: #2a1a11;
