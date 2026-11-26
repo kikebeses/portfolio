@@ -53,6 +53,7 @@
     "copyright": "© {{year}} Enrique Beses"
   },
   "common": {
-    "opensInNewTab": "(opens in a new tab)"
+    "opensInNewTab": "(opens in a new tab)",
+    "skipToContent": "Skip to content"
   }
 }
