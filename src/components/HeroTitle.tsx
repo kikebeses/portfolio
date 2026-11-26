@@ -12,12 +12,13 @@ function HeroTitle() {
   const title = t('hero.title')
 
   // Letters are grouped by word so a line can never break in the middle of a word.
-  let offset = 0
-  const words = title.split(' ').map((text) => {
-    const word = { text, offset }
-    offset += text.length + 1
-    return word
-  })
+  // `offset` is the index of the word's first letter in the title (spaces included),
+  // so the stagger runs across the whole title.
+  const words = title.split(' ').reduce<{ text: string; offset: number }[]>((acc, text) => {
+    const previous = acc.at(-1)
+    const offset = previous ? previous.offset + previous.text.length + 1 : 0
+    return [...acc, { text, offset }]
+  }, [])
 
   return (
     <h1 className="-ml-[0.04em] text-display font-medium">
