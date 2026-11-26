@@ -5,7 +5,7 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 
 /** Distance (px) between a stuck card's top and the next card's top once covered. */
 const STACK_OFFSET = 24
@@ -24,7 +24,9 @@ export function useStackedCard(enabled: boolean) {
   const active = enabled && !reduceMotion
   const { scrollY } = useScroll()
 
-  function update() {
+  // Stable across renders (it only reads the ref and the motion value), so the
+  // resize listener below is not re-attached on every render.
+  const update = useCallback(() => {
     const card = ref.current
     const next = card?.nextElementSibling
     if (!card || !next) {
@@ -34,7 +36,7 @@ export function useStackedCard(enabled: boolean) {
     const gap = next.getBoundingClientRect().top - card.getBoundingClientRect().top - STACK_OFFSET
     const p = 1 - gap / (window.innerHeight * COVER_DISTANCE)
     progress.set(Math.min(Math.max(p, 0), 1))
-  }
+  }, [progress])
 
   useMotionValueEvent(scrollY, 'change', () => {
     if (active) {
@@ -50,8 +52,7 @@ export function useStackedCard(enabled: boolean) {
     update()
     window.addEventListener('resize', update)
     return () => window.removeEventListener('resize', update)
-    // `update` only reads refs and motion values, which are stable across renders.
-  }, [active])
+  }, [active, update])
 
   const scale = useTransform(progress, (p) => 1 - 0.07 * p)
   const filter = useTransform(progress, (p) =>
