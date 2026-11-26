@@ -278,6 +278,8 @@
   html {
     /* The design uses the browser's normal line-height; paragraphs set their own. */
     line-height: normal;
+    /* Anchor jumps and focused elements stop below the fixed header, not under it */
+    scroll-padding-top: 6rem;
   }
 
   @media (prefers-reduced-motion: no-preference) {
