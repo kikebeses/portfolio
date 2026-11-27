@@ -14,18 +14,14 @@ const STICKY_TOP = 104
 const STICKY_STEP = 24
 
 function StackedCard({ index, enabled, children }: StackedCardProps) {
-  const stack = useStackedCard(enabled)
+  const stack = useStackedCard(enabled, STICKY_TOP + STICKY_STEP * index)
 
   if (!enabled) {
     return <div>{children}</div>
   }
 
   return (
-    <motion.div
-      ref={stack.ref}
-      style={{ ...stack.style, top: STICKY_TOP + STICKY_STEP * index }}
-      className="sticky origin-top"
-    >
+    <motion.div ref={stack.ref} style={stack.style} className="sticky origin-top">
       {children}
     </motion.div>
   )
